@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+/* Start Global Rule */
+:root {
+  --primary: #000;
+  --secondary: #18181b;
+  --primary-border: #27272f;
+  --border: #3f3f47;
+  --box-shadow-color: #000;
+  --main-color: #f4f4f5;
+  --sub-color: #a1a1aa;
+  --bg-header: #27272a;
+  --blue-color: #5dbcfc;
+  --button-bg: #323232;
+  --btn-hover: #252525;
+  --main-transition: .3s;
+}
+.light {
+  --primary: #fafafa;
+  --secondary: #fff;
+  --primary-border: #f5f4f4;
+  --border: #aaa;
+  --box-shadow-color: #cdcdcd;
+  --bg-header: #ffffff;
+  --main-color: #2a2627;
+  --sub-color: #52525c;
+  --blue-color: #007efe;
+  --btn-hover: #eee;
+  --button-bg: #eee;
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html {
+  font-family: "Roboto", sans-serif;
+}
+body {
+  background-color: var(--primary);
+  color: var(--main-color);
+}
+.myPage {
+  background-color: var(--secondary);
+  border: 3px solid var(--primary-border);
+  padding-bottom: 20px;
+  margin-bottom: 1px;
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 755px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1070px;
+  }
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: initial;
+}
+button {
+  border: none;
+  outline: none;
+}
+::-webkit-scrollbar {
+  width: 15px;
+}
+::-webkit-scrollbar-track {
+  border-radius: 5px;
+  background-color: #202020;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #555;
+  border-radius: 5px;
+}
+/* End Global Rule */
+/* Start Component */
+.divider {
+  border-bottom: 1px solid var(--border-color);
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+/* End Component */
+.go-up {
+  border: none;
+  outline: none;
+  position: fixed;
+  right: 15px;
+  bottom: 20px;
+  background-color: var(--blue-color);
+  color: var(--main-color);
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  font-size: 25px;
+  transition: 1s; 
+}
+.go-up:hover {
+  cursor: pointer;
+  background-color: #1178bc;
+  opacity: 1;
+}

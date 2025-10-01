@@ -1,0 +1,117 @@
+/* Start Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 2rem;
+  margin-top: 1.2rem;
+}
+header nav {
+  background-color: var(--bg-header);
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px solid var(--border-color);
+  box-shadow: 1px 1px 7px var(--box-shadow-color);
+}
+header nav ul {
+  display: flex;
+  gap: 25px;
+}
+header ul li a {
+  color: var(--main-color);
+  opacity: 0.9;
+  font-size: 15px;
+  font-weight: 500;
+  transition: var(--main-tranisition);
+}
+header ul li a:hover {
+  color: var(--blue-color);
+  opacity: 1;
+}
+/* End Header */
+/* Start Modal */
+header .fixed {
+  position: fixed;
+  background-color: #3b3b3bf3;
+  inset: 0;
+  z-index: 100;
+  backdrop-filter: blur(4px);
+}
+header .fixed ul.modal {
+  background-color: var(--secondary);
+  width: 80%;
+  padding: 10px;
+  margin: 2rem auto 0;
+  border-radius: 1.5rem;
+  animation: move-up 0.5s linear 1;
+}
+@keyframes move-up {
+  0% {
+    scale: 0;
+  }
+  70% {
+    scale: 1.2;
+  }
+  100% {
+    scale: 1;
+  }
+}
+header .fixed ul.modal li:not(:first-child) {
+  padding-bottom: 15px;
+  padding-top: 15px;
+}
+header .fixed ul.modal li:not(:first-child, :last-child) {
+  border-bottom: 1px solid var(--border-color);
+}
+/* End Modal */
+/* icons */
+header i.menu,
+header i.mode {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background-color: var(--secondary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid rgba(255, 166, 0, 0.5);
+  color: var(--sub-color);
+  font-size: 1.2rem;
+  transition: var(--main-transition);
+  cursor: pointer;
+}
+header i.menu {
+  display: none;
+}
+header i.sun {
+  color: rgba(255, 166, 0, 0.5);
+}
+header i.moon:hover {
+  color: var(--main-color);
+}
+header i.mode:hover {
+  border-color: orange;
+}
+header .fixed ul.modal i.close-modal {
+  display: block;
+  width: fit-content;
+  margin: 10px 10px 0 auto;
+  color: red;
+  font-size: 1rem;
+  transition: var(--main-transition);
+}
+header .fixed ul.modal i.close-modal:hover {
+  font-size: 1.4rem;
+  rotate: 180deg;
+}
+/* End Icons */
+/* Start Responsive (media query) */
+@media (max-width: 767px) {
+  header i.menu {
+    display: flex;
+  }
+  header nav {
+    display: none;
+  }
+}
+/* End Responsive (media query) */

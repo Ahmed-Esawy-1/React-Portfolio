@@ -1,0 +1,102 @@
+main {
+  display: flex;
+  align-items: start;
+  gap: 30px;
+}
+/* Start Left-Section (Filter) */
+main .filter {
+  min-width: 140px;
+}
+main .filter .filter-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px 15px;
+}
+main .filter .filter-buttons button {
+  background-color: var(--button-bg);
+  color: var(--main-color);
+  padding: 10px 15px;
+  border-radius: 6px;
+  font-size: 15px;
+  opacity: 0.4;
+  cursor: pointer;
+}
+main .filter .filter-buttons button.active {
+  border: 1px solid var(--border);
+  opacity: 1;
+  font-weight: bold;
+  font-size: 17px;
+}
+main .filter .filter-buttons button:hover {
+  opacity: 1;
+} 
+/* End Left-Section */
+/* Start Right-Section (Projects) */
+main .projects {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 15px;
+}
+main .projects .card {
+  border-radius: 10px;
+  overflow: hidden;
+  border: 2px solid var(--border);
+}
+main .projects img {
+  max-width: 100%;
+}
+main .projects .box {
+  padding: 15px;
+}
+main .projects .box h2 {
+  color: var(--main-color);
+  text-transform: capitalize;
+}
+main .projects .box p {
+  margin-top: 10px;
+  margin-bottom: 15px;
+  line-height: 1.6;
+  color: var(--sub-color);
+  max-height: 100px;
+  overflow: hidden;
+}
+main .projects .box .icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main .projects .box .icon {
+  font-size: 25px;
+  color: var(--sub-color);
+  margin-right: 10px;
+}
+main .projects .box .icon:hover {
+  color: var(--main-color);
+}
+main .projects .box .more {
+  color: var(--blue-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+main .projects .box .more i {
+  display: block;
+  margin-top: 2px;
+  font-size: 12px;
+}
+/* End Right-Section */
+/* Start Responsive (media query) */
+@media (max-width: 767px) {
+  main {
+    flex-direction: column;
+    align-items: center;
+  }
+  main .filter .filter-buttons {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+/* End Responsive (media query) */

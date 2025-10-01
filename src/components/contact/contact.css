@@ -1,0 +1,92 @@
+.contact {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+/* STart Form */
+.contact h2 {
+  color: var(--main-color);
+}
+.contact h2 i {
+  color: var(--sub-color);
+  margin-right: 10px;
+}
+.contact p {
+  margin-top: 10px;
+  margin-bottom: 15px;
+  color: var(--sub-color);
+  line-height: 1.7;
+}
+.contact form .input-box {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.contact form label {
+  min-width: 120px;
+  color: var(--sub-color);
+}
+.contact form #email,
+.contact form #message,
+.contact form input[type="submit"] {
+  outline: none;
+  border: 1px solid var(--border);
+  padding: 10px;
+  border-radius: 4px;
+  width: 300px;
+  background-color: var(--secondry);
+  font-size: 16px;
+  color: var(--main-color);
+}
+.contact form #message {
+  resize: none;
+  height: 180px;
+}
+.contact form #email::placeholder,
+.contact form #message::placeholder {
+  color: var(--sub-color);
+}
+.contact form #email:focus::placeholder,
+.contact form #message:focus::placeholder {
+  opacity: 0;
+}
+.contact form #email:focus,
+.contact form #message:focus {
+  border: 2px solid var(--border);
+}
+.contact form input[type="submit"] {
+  display: block;
+  width: fit-content;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: var(--main-transition);
+}
+.contact form input[type="submit"]:hover {
+  background-color: var(--btn-hover);
+}
+.contact form .form-validate {
+  color: red;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+/* End Form */
+/* Start Animation */
+@media (max-width: 991px) {
+  .contact .animation {
+    display: none;
+  }
+}
+/* End Animation */
+/* Start Responsive (media query) */
+@media (max-width: 767px) {
+  .contact p {
+    margin-bottom: 30px;
+  }
+  .contact form .input-box {
+    flex-direction: column;
+    align-items: start;
+    margin-bottom: 25px;
+  }
+}
+/* End Responsive (media query) */

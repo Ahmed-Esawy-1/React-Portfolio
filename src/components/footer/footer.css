@@ -1,0 +1,23 @@
+footer {
+  display: flex;
+  justify-content: space-between;
+}
+footer ul {
+  display: flex;
+  gap: 20px;
+}
+footer ul a,
+footer div {
+  font-size: 14px;
+  color: var(--sub-color);
+}
+footer ul a:hover {
+  color: var(--main-color);
+}
+@media (max-width: 767px) {
+  footer {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+}
